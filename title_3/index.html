@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <link rel="stylesheet" href="../style.css">
+    <title>AAD WS 2022/2023</title>
+</head>
+<body>
+    <div class="main-body">
+		<nav id="navbar">
+			<header id="nav-header">Franziska Krauß<br />
+						Lars Neumann<br />
+						Stefan Raiber<br />
+						Robert Wolf
+							</header>
+            <a href="https://larsneumann98.github.io/CityDraftPrjct/" class="nav-link">
+				PROJECT DESCRIPTION</a>
+			<a href="../title_1" class="nav-link">
+				STREET GENERATION</a>
+			<a href="../title_2" class="nav-link">
+				PLOT ASSIGNMENT</a>
+			
+            <a href="./" class="nav-link">
+                VISUALIZATION</a>
+		</nav>
+	<main id="main-doc">
+            <h1>
+           VISUALIZATION
+            </h1>
+            <section class="main-section" id="description">
+                <header>
+                    Project Description
+                </header>
+                <p>
+                    The algorithm generates different geometric outputs based on the input values. <br />
+		    Input Value G (greenery): a green mesh is created based on the existing plot boundaries.<br />
+		    Input Value P (public space): a grey mesh is generated based on the existing plot boundaries.<br />
+		    Input Value I (industrial): the plot boundaries are offseted by 2 meters and an extruded and caped mesh is drawn based on the offseted lines.<br />
+		    Input Value C (city - mixed use): the outlines of each plot are offset by the value 2 meters. If the length of each offsetted line is bigger than a set value the lines are offsetted once again. The next step generates the extruded geometry by subtracting the area enclosed by the inner lines, in order to recreate the look of a block perimeter development.<br />
+		   Input Value R (residential): this function divides the assigned plot into new smaller plots. Those plots are offsetted once again and the new geometry is extruded. <br />
+			<br />
+		   The current challanges include finding the smaller plots for the value R, as well as chosing the right length to offset depending on the plot size for the Value C. <br />
+			The visualization is especially valuable for the enduser, by refering to the size of the cultivated area, more efficient geometries can be generated based on each individual plot. Therefore the area can be used in the most efficient way. <br />
+                </p>
+            <section class="main-section" id="algorithm">
+                <header>
+                    Flowchart
+                </header>
+                
+                <img src="../images/flowchart 1.jpg" alt="Algorithm FlowChart">
+            </section>
+
+            <section class="main-section" id="web-app">
+                <header>
+                    Web App
+                </header>
+                <body>
+                    <iframe class="responsive-iframe" src="../webapps/webapp_franzi.html"></iframe>
+                </body>
+                <p>
+                    <br>
+                </p>
+            </section>
+            
+        </main>
+    </div>
+</body>
+</html>

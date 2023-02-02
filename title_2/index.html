@@ -1,0 +1,106 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <link rel="stylesheet" href="../style.css">
+    <title>AAD WS 2022/2023</title> 
+</head>
+<body>
+    <div class="main-body">
+		<nav id="navbar">
+			<header id="nav-header">Franziska Krauß<br />
+						Lars Neumann<br />
+						Stefan Raiber<br />
+						Robert Wolf
+						</header>
+            <a href="https://larsneumann98.github.io/CityDraftPrjct/" class="nav-link">
+				PROJECT DESCRIPTION</a>
+			<a href="../title_1" class="nav-link">
+				STREET GENERATION</a>
+			<a href="./" class="nav-link">
+				PLOT ASSIGNMENT</a>
+            		<a href="../title_3" class="nav-link">
+               			VISUALIZATION</a>
+		</nav>
+
+        <main id="main-doc">
+            <h1>
+            PLOT ASSIGNMENT
+            </h1>
+            <section class="main-section" id="description">
+                <header>
+                    Project Description
+                </header>
+                <p>The blue function takes a Set of Lines as an Input and searches for all "plots" enclosed by lines. 
+			It does that by following a line starting from any point on the outer line and always moving clockwise to the next connecting line.<br />
+			If there is more then one line connecting it will turn left for finding an outline, and continue to do so until it reaches a visited point again.
+			And it will turn right to find an enclosed plot, starting from any outline and continue to turn right until it reaches a visited point again.<br />
+			Then the parts of the enclosed plot that were part of the Outline are removed for the new Input, until all Plots are found. Those will be passed on to
+			the red function.<br />This is currently generating a faulty output, as it has trouble finding the loops correctly.<br />
+			The green function searches for the neighbouring plots, it does that by looking for all the plots that share 2 or more coordinates with the current plot.
+			it outputs the result in a List like this [PlotNr[Neighbouring Plots]] and passes it on to the red function.<br /><br />
+			The red function first declares a list of possible values and their respective weight and also declares the count of each value as 0. Then it selects the first
+			plot in the dictionary and assigns a random value chosen from the list of possible values to that plot in the dictionary. <br />
+			The function then loops through the plots in the dictionary and for each plot, it loops through its corresponding list of neighbors. For each neighbor, 
+			it checks the value assigned to that neighbor and based on that it may remove a certain values from the list of possible values.<br />
+			If a certain value reaches a set threshold, the function may remove that from possible values.
+			The function then assigns random value to each plot in the dictionary from the possible values (list) but with the updated weight.<br />
+			It also keeps track of the count of each value assigned. The function then returns the modified dictionary with assigned values.
+                   
+                </p>
+
+        
+           
+			
+		
+               
+            </section>
+
+            <section class="main-section" id="algorithm">
+                <header>
+                    Flow Chart
+                </header>
+
+                <img src="../images/FlowChart_Loop_Neigbor_PlotFinder-1.jpg" alt="Design Iterations">
+            </section>
+
+            <section class="main-section" id="web-app">
+                <header>
+                    Web App
+                </header>
+                <body>
+                    <p>
+                   
+			    
+			    
+			    
+			    
+			    
+                    </p>
+                    <iframe class="responsive-iframe" src="../webapps/Zuardin.html"></iframe>
+                    <p>
+                        <br>
+                    </p>
+                </body>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
